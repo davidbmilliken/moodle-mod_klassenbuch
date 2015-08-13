@@ -122,6 +122,7 @@ $PAGE->set_heading(format_string($course->fullname));
 
 klassenbuch_add_fake_block($chapters, $chapter, $klassenbuch, $cm, $edit);
 
+/*
 $subsdiv = '<div class="subscription">';
 
 if (!isset($klassenbuch->forcesubscribe)) {
@@ -167,6 +168,8 @@ if (!empty($USER->id) && !isguestuser()) {
 }
 
 $subsdiv .= '</div>';
+
+*/
 
 // Prepare chapter navigation icons.
 $previd = null;
@@ -256,6 +259,7 @@ foreach ($customfields as $customfield) {
         echo format_text($chaptertext, $customfield->contentformat, array('noclean' => true, 'context' => $context));
     }
 }
+
 
 // Add attachments.
 echo klassenbuch_output_attachments($chapter->id, $context);
